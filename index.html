@@ -1,43 +1,33 @@
 <!doctype html>
-<html lang="en">
 <head>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/main.css"></link>
   <script type="text/javascript" src="./js/jquery-1.7.2.min.js"></script>
   <script type="text/javascript" src="./js/jquery.scrollify.js"></script>
   <script>
-    $(function() {
-  $.scrollify({
-		section:".panel",
-    updateHash: true,
-    scrollbars:false
+  $(function() {
+    $.scrollify({
+      section:".panel",
+      updateHash: true,
+      scrollbars:false
 
+    });
   });
-});
 
-function OnLinkClick(strLink) {
-$.scrollify.move("#"+strLink);
+  function OnLinkClick(strLink) {
+    $.scrollify.move("#"+strLink);
     return false;
-}
+  }
   </script>
 
-<title>Hello, world!</title>
+  <title>Hello, world!</title>
 </head>
 <body>
-  <div class="panel" data-section-name="top">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6 col-md-3" onclick="OnLinkClick('name');"><a href="#name"><h1>名前</h1></a></div>
-        <div class="col-sm-6 col-md-3" onclick="OnLinkClick('career');"><a href="#career" ><h1>経歴</h1></a></div>
-        <div class="col-sm-6 col-md-3" onclick="OnLinkClick('create');"><a href="#create"><h1>作成物</h1></a></div>
-        <div class="col-sm-6 col-md-3" onclick="OnLinkClick('link');"><a href="#link"><h1>リンク</h1></a></div>
-      </div>
-    </div>
+  <div class="panel top" data-section-name="top">
+        <a href="#name" class="top_name"><div onclick="OnLinkClick('name');">名前</div></a>
+        <a href="#career" class="top_career"><div onclick="OnLinkClick('career');">経歴</div></a>
+        <a href="#create" class="top_create"><div onclick="OnLinkClick('create');">作成物</div></a>
+        <a href="#link" class="top_link"><div onclick="OnLinkClick('link');">リンク</div></a>
   </div>
 
   <div class="panel" data-section-name="name">

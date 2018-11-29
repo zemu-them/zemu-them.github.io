@@ -1,0 +1,37 @@
+.panel{
+  height: auto;
+  overflow: hidden;
+}
+.top :link{
+  color: #000;
+  text-decoration: none;
+  font-size: x-large;
+  text-align: center;
+}
+.top :hover{
+  text-shadow: 0px 0px 5px #FFF,0px 0px 5px #FFF;
+}
+.top_name div{
+  background-color: #FF8CE5;
+}
+.top_name :hover{
+  background-color: #E800AE;
+}
+.top_career div{
+  background-color: #BE8CFF;
+}
+.top_career :hover{
+  background-color: #7B00FF;
+}
+.top_create div{
+  background-color: #8CA5FF;
+}
+.top_create :hover{
+  background-color: #0026E8;
+}
+.top_link div{
+  background-color: #8CEAFF;
+}
+.top_link :hover{
+  background-color: #00CCFF;
+}
