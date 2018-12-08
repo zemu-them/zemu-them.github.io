@@ -1,98 +1,108 @@
-  <!doctype html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/main.css"></link>
-    <script type="text/javascript" src="./js/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="./js/jquery.scrollify.js"></script>
-    <script>
-    $(function() {
-      $.scrollify({
-        section:".panel",
-        updateHash: true,
-        scrollbars:false
-      });
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/main.css"></link>
+  <script type="text/javascript" src="./js/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.scrollify.js"></script>
+  <script>
+  $(function() {
+    $.scrollify({
+      section:".panel",
+      updateHash: true,
+      scrollbars:false
     });
+  });
 
   if(window.innerWidth < window.innerHeight){
-  $(function() {
+    $(function() {
       $(".top_name div").css({
-          "height": "25%",
-          "width": "100%"
+        "height": "25%",
+        "width": "100%"
       });
       $(".top_career div").css({
-          "height": "25%",
-          "width": "100%"
+        "height": "25%",
+        "width": "100%"
       });
       $(".top_create div").css({
-          "height": "25%",
-          "width": "100%"
+        "height": "25%",
+        "width": "100%"
       });
       $(".top_link div").css({
-          "height": "25%",
-          "width": "100%"
+        "height": "25%",
+        "width": "100%"
       });
-  });
+    });
   }
 
-    function OnLinkClick(strLink) {
-      $.scrollify.move("#"+strLink);
-      return false;
-    }
-    </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125047401-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  function OnLinkClick(strLink) {
+    $.scrollify.move("#"+strLink);
+    return false;
+  }
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125047401-2"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-      gtag('config', 'UA-125047401-2');
-    </script>
-    <title>portfolio</title>
-  </head>
-  <body>
-    <div class="panel top" data-section-name="top">
-      <a href="#name" class="top_name"><div onclick="OnLinkClick('name');">名前</div></a><a href="#career" class="top_career"><div onclick="OnLinkClick('career');">経歴</div></a><a href="#create" class="top_create"><div onclick="OnLinkClick('create');">作成物</div></a><a href="#link" class="top_link"><div onclick="OnLinkClick('link');">リンク</div></a>
-    </div>
+  gtag('config', 'UA-125047401-2');
+  </script>
+  <title>portfolio</title>
+</head>
+<body>
+  <div class="panel top" data-section-name="top">
+    <a href="#name" class="top_name"><div onclick="OnLinkClick('name');">名前</div></a><a href="#career" class="top_career"><div onclick="OnLinkClick('career');">経歴</div></a><a href="#create" class="top_create"><div onclick="OnLinkClick('create');">作成物</div></a><a href="#link" class="top_link"><div onclick="OnLinkClick('link');">リンク</div></a>
+  </div>
 
-    <div class="panel name" data-section-name="name">
-      <p>名前<p>
-        <div>
+  <div class="panel name" data-section-name="name">
+    <h2>名前</h2>
+      <div>
         name : 川端 りな (Rina KAWAHATA)<br>
         twitter : @zemu_them<br>
       </div>
-    </div>
-
-    <div class="panel career" data-section-name="career">
-      <p>経歴</p>
       <div>
-        ～2018年3月:高専卒業<br>
-        2018年4月～2018年10月:とある企業でSES<br>
+        連絡先 : zemuthem030[at]gmail.com
       </div>
-    </div>
+  </div>
 
-    <div class="panel" data-section-name="create">
-      <p>作成物</p>
+  <div class="panel career" data-section-name="career">
+    <h2>経歴</h2>
       <div>
-      ポートフォリオ<br>
-      <a href="https://zemu-them.github.io/">ポートフォリオ</a>
+        ～2018年3月 : 高専卒業<br>
+        2018年4月～2018年10月 : SES<br>
+      </div>
+      <div>
+        スキル : .NetFramework<br>
+      </div>
   </div>
-    </div>
 
-    <div class="panel link" data-section-name="link">
-      <p>リンク</p>
+  <div class="panel create" data-section-name="create">
+    <h2>作成物</h2>
       <div>
-      Twitter<br>
-      <a href="https://twitter.com/zemu_them">Twitter:@zemu_them</a>
+        ポートフォリオサイトの作成<br>
+        <a href="https://zemu-them.github.io/">ポートフォリオ</a>
+      </div>
   </div>
+
+  <div class="panel link" data-section-name="link">
+    <h2>リンク</h2>
       <div>
-      ブログ<br>
-      <a href="https://koremu.hatenablog.com/">バーチャル美少女の中の人の日記</a>
-  </div>
+        Twitter<br>
+        <a href="https://twitter.com/zemu_them">Twitter:@zemu_them</a>
+      </div>
       <div>
-      ポートフォリオ<br>
-      <a href="https://zemu-them.github.io/">ポートフォリオ</a>
+        GitHub<br>
+        <a href="https://github.com/zemu-them">GitHub:zemu-them</a>
+      </div>
+      <div>
+        ブログ<br>
+        <a href="https://koremu.hatenablog.com/">バーチャル美少女の中の人の日記</a>
+      </div>
+      <div>
+        ポートフォリオ<br>
+        <a href="https://zemu-them.github.io/">ポートフォリオ</a>
+      </div>
   </div>
-    </div>
-  </body>
-  </html>
+</body>
+</html>
