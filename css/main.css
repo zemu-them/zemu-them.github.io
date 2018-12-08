@@ -1,0 +1,138 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  background-color: #F1F1F3;
+}
+h2{
+  display:inline-block;
+  padding: 0px 5px 0px 5px;
+}
+
+.panel{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: inset 0 0 15px rgba(0,0,0,.3);
+  text-align: center;
+}
+.top{
+
+}
+.top :link{
+  color: #000;
+  text-decoration: none;
+  font-size: x-large;
+}
+.top :hover{
+  text-shadow: 0px 0px 5px #FFF,0px 0px 15px #FFF,0px 0px 5px #FFF;
+}
+.top_name div{
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  width: 25%;
+  height: 100%;
+  background-color: #FFFEBB;
+  box-shadow: inset 0 0 15px rgba(0,0,0,.3);
+}
+.top_name :hover{
+  background-image: linear-gradient( -45deg, #FFFEBB 25%, #F1F1F3	 25%, #F1F1F3	 50%, #FFFEBB 50%, #FFFEBB 75%, #F1F1F3 75%, #F1F1F3	);
+  background-size: 50px 50px;
+  background-attachment: fixed;
+}
+.top_career div{
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  width: 25%;
+  height: 100%;
+  background-color: #D0E2D1;
+  box-shadow: inset 0 0 15px rgba(0,0,0,.3);
+}
+.top_career :hover{
+  background-image: linear-gradient( -45deg, #D0E2D1 25%, #F1F1F3	 25%, #F1F1F3	 50%, #D0E2D1 50%, #D0E2D1 75%, #F1F1F3 75%, #F1F1F3	);
+  background-size: 50px 50px;
+  background-attachment: fixed;
+}
+.top_create div{
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  width: 25%;
+  height: 100%;
+  background-color: #F4BACE;
+  box-shadow: inset 0 0 15px rgba(0,0,0,.3);
+}
+.top_create :hover{
+  background-image: linear-gradient( -45deg, #F4BACE 25%, #F1F1F3	 25%, #F1F1F3	 50%, #F4BACE 50%, #F4BACE 75%, #F1F1F3 75%, #F1F1F3	);
+  background-size: 50px 50px;
+  background-attachment: fixed;
+}
+.top_link div{
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  width: 25%;
+  height: 100%;
+  background-color: #FFC696;
+  box-shadow: inset 0 0 15px rgba(0,0,0,.3);
+}
+.top_link :hover{
+  background-image: linear-gradient( -45deg, #FFC696 25%, #F1F1F3	 25%, #F1F1F3	 50%, #FFC696 50%, #FFC696 75%, #F1F1F3 75%, #F1F1F3	);
+  background-size: 50px 50px;
+  background-attachment: fixed;
+}
+.name h2{
+background: linear-gradient(transparent 40%, #FFFEBB 40%);
+}
+.name div{
+  background-image: linear-gradient( -45deg, #FFFEBB80 25%, #F1F1F3	 25%, #F1F1F3	 50%, #FFFEBB80 50%, #FFFEBB80 75%, #F1F1F3 75%, #F1F1F3	);
+  background-size: 30px 30px;
+  background-attachment: fixed;
+  width: 50%;
+  padding: 5px;
+  margin-left: 25%;
+  margin-top: 10px;
+}
+
+.career h2{
+  background: linear-gradient(transparent 40%, #D0E2D1 40%);
+  width: auto;
+}
+.career div{
+  background-image: linear-gradient( -45deg, #D0E2D180 25%, #F1F1F3	 25%, #F1F1F3	 50%, #D0E2D180 50%, #D0E2D180 75%, #F1F1F3 75%, #F1F1F3	);
+  background-size: 30px 30px;
+  background-attachment: fixed;
+  width: 50%;
+  padding: 5px;
+  margin-left: 25%;
+  margin-top: 10px;
+}
+
+.create h2{
+  background: linear-gradient(transparent 40%, #F4BACE 40%);
+  width: auto;
+}
+.create div{
+  background-image: linear-gradient( -45deg, #F4BACE80 25%, #F1F1F3	 25%, #F1F1F3	 50%, #F4BACE80 50%, #F4BACE80 75%, #F1F1F3 75%, #F1F1F3	);
+  background-size: 30px 30px;
+  background-attachment: fixed;
+  width: 50%;
+  padding: 5px;
+  margin-left: 25%;
+  margin-top: 10px;
+}
+
+.link h2{
+  background: linear-gradient(transparent 40%, #FFC696 40%);
+  width: auto;
+}
+.link div{
+  background-image: linear-gradient( -45deg, #FFC69680 25%, #F1F1F3	 25%, #F1F1F3	 50%, #FFC69680 50%, #FFC69680 75%, #F1F1F3 75%, #F1F1F3	);
+  background-size: 30px 30px;
+  background-attachment: fixed;
+  width: 50%;
+  padding: 5px;
+  margin-left: 25%;
+  margin-top: 10px;
+}
