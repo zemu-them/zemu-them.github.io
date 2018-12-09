@@ -4,41 +4,7 @@
   <link rel="stylesheet" href="css/main.css"></link>
   <script type="text/javascript" src="./js/jquery-1.7.2.min.js"></script>
   <script type="text/javascript" src="./js/jquery.scrollify.js"></script>
-  <script>
-  $(function() {
-    $.scrollify({
-      section:".panel",
-      updateHash: true,
-      scrollbars:false
-    });
-  });
-
-  if(window.innerWidth < window.innerHeight){
-    $(function() {
-      $(".top_name div").css({
-        "height": "25%",
-        "width": "100%"
-      });
-      $(".top_career div").css({
-        "height": "25%",
-        "width": "100%"
-      });
-      $(".top_create div").css({
-        "height": "25%",
-        "width": "100%"
-      });
-      $(".top_link div").css({
-        "height": "25%",
-        "width": "100%"
-      });
-    });
-  }
-
-  function OnLinkClick(strLink) {
-    $.scrollify.move("#"+strLink);
-    return false;
-  }
-  </script>
+  <script type="text/javascript" src="./js/main.js"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125047401-2"></script>
   <script>
