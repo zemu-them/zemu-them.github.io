@@ -9,7 +9,37 @@
     $.scrollify({
       section:".panel",
       updateHash: true,
-      scrollbars:false
+      scrollbars:false,
+      before:function(i,panels) {
+        if(i != 0){
+          var ref = panels[i].attr("data-section-name");
+          $(".pagination .active").removeClass("active");
+          $(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
+          $(".pagination").css({
+            "visibility" : "visible"
+          });
+        }else{
+          $(".pagination .active").removeClass("active");
+          $(".pagination").css({
+            "visibility" : "hidden"
+          });
+        }
+      },
+      after:function() {
+        var pagination = "<ul class=\"pagination\">";
+        var activeClass = "";
+        $(".panel").each(function(i) {
+          activeClass = "";
+          if(i===0) {
+            activeClass = "active";
+          }
+          pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
+        });
+
+        pagination += "</ul>";
+        $(".home").append(pagination);
+        $(".pagination a").on("click",$.scrollify.move);
+      }
     });
   });
 
@@ -81,32 +111,36 @@
   <div class="panel top" data-section-name="top">
     <a href="#name" class="top_name"><div onclick="OnLinkClick('name');">名前</div></a><a href="#career" class="top_career"><div onclick="OnLinkClick('career');">経歴</div></a><a href="#create" class="top_create"><div onclick="OnLinkClick('create');">作成物</div></a><a href="#link" class="top_link"><div onclick="OnLinkClick('link');">リンク</div></a>
   </div>
-
   <div class="panel name" data-section-name="name">
     <h2>名前</h2>
-    <div>
+    <div class="name_contents">
       name : 川端 りな (Rina KAWAHATA)<br>
       twitter : @zemu_them<br>
     </div>
-    <div>
+    <div class="name_contents">
       連絡先 : zemuthem030[at]gmail.com
+    </div>
+    <div class="pagination">
+      <li><a class="" href="#name"><span class="hover-text">名前</span></a></li>
+      <li><a class="" href="#career"><span class="hover-text">経歴</span></a></li>
+      <li><a class="" href="#create"><span class="hover-text">作成物</span></a></li>
+      <li><a class="" href="#link"><span class="hover-text">リンク</span></a></li>
     </div>
   </div>
 
   <div class="panel career" data-section-name="career">
     <h2>経歴</h2>
-    <div>
+    <div class="career_contents">
       ～2018年3月 : 高専卒業<br>
       2018年4月～2018年10月 : SES<br>
     </div>
-    <div>
+    <div class="career_contents">
       スキル : .NetFramework<br>
     </div>
   </div>
-
   <div class="panel create" data-section-name="create">
     <h2>作成物</h2>
-    <div>
+    <div class="create_contents">
       ポートフォリオサイトの作成<br>
       <a href="https://zemu-them.github.io/">ポートフォリオ</a>
     </div>
@@ -114,22 +148,23 @@
 
   <div class="panel link" data-section-name="link">
     <h2>リンク</h2>
-    <div>
+    <div class="link_contents">
       Twitter<br>
       <a href="https://twitter.com/zemu_them">Twitter:@zemu_them</a>
     </div>
-    <div>
+    <div class="link_contents">
       GitHub<br>
       <a href="https://github.com/zemu-them">GitHub:zemu-them</a>
     </div>
-    <div>
+    <div class="link_contents">
       ブログ<br>
       <a href="https://koremu.hatenablog.com/">バーチャル美少女の中の人の日記</a>
     </div>
-    <div>
+    <div class="link_contents">
       ポートフォリオ<br>
       <a href="https://zemu-them.github.io/">ポートフォリオ</a>
     </div>
   </div>
+
 </body>
 </html>
