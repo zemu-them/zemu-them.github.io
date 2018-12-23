@@ -14,23 +14,50 @@
   });
 
   if(window.innerWidth < window.innerHeight){
-    $(function() {
-      $(".top_name div").css({
-        "height": "25%",
-        "width": "100%"
-      });
-      $(".top_career div").css({
-        "height": "25%",
-        "width": "100%"
-      });
-      $(".top_create div").css({
-        "height": "25%",
-        "width": "100%"
-      });
-      $(".top_link div").css({
-        "height": "25%",
-        "width": "100%"
-      });
+    topPageLink();
+  }
+
+  $(function(){
+    //画面サイズ変更時に呼ばれる
+    $(window).resize(function(){
+      if($(window).width() < $(window).height()){
+        topPageLink();
+      } else {
+        $(".top_name div").css({
+          "height": "100%",
+          "width": "25%"
+        });
+        $(".top_career div").css({
+          "height": "100%",
+          "width": "25%"
+        });
+        $(".top_create div").css({
+          "height": "100%",
+          "width": "25%"
+        });
+        $(".top_link div").css({
+          "height": "100%",
+          "width": "25%"
+        });
+      }
+    });
+  });
+  function topPageLink() {
+    $(".top_name div").css({
+      "height": "25%",
+      "width": "100%"
+    });
+    $(".top_career div").css({
+      "height": "25%",
+      "width": "100%"
+    });
+    $(".top_create div").css({
+      "height": "25%",
+      "width": "100%"
+    });
+    $(".top_link div").css({
+      "height": "25%",
+      "width": "100%"
     });
   }
 
