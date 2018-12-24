@@ -8,6 +8,14 @@ h2{
   padding: 0px 5px 0px 5px;
 }
 
+table {
+  padding: 0px;
+  border-collapse: collapse;
+}
+tr:nth-child(even) {
+  background: #FFFEBB;
+}
+
 .panel{
   height: 100%;
   width: 100%;
@@ -185,4 +193,23 @@ h2{
   top:0;
   right:4px;
   bottom:0;
+}
+
+.expression h2{
+  background: linear-gradient(transparent 40%, #FFFEBB 40%);
+  width: auto;
+}
+.expression .table{
+  padding: 5px;
+  border:solid 2px #FFFEBB;
+  border-radius: 1em;
+  background-color: #FFFFFF;
+}
+
+.expression .table .title{
+  font-size: large;
+  display: inline-block;
+  padding: 0px 5px 0px 5px;
+  background: linear-gradient(transparent 40%, #FFFEBB 40%);
+
 }
