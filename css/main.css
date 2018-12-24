@@ -8,6 +8,14 @@ h2{
   padding: 0px 5px 0px 5px;
 }
 
+table {
+  padding: 0px;
+  border-collapse: collapse;
+}
+tr:nth-child(even) {
+  background: #FFFEBB;
+}
+
 .panel{
   height: 100%;
   width: 100%;
@@ -83,9 +91,9 @@ h2{
   background-attachment: fixed;
 }
 .name h2{
-background: linear-gradient(transparent 40%, #FFFEBB 40%);
+  background: linear-gradient(transparent 40%, #FFFEBB 40%);
 }
-.name div{
+.name_contents{
   background-image: linear-gradient( -45deg, #FFFEBB80 25%, #F1F1F3	 25%, #F1F1F3	 50%, #FFFEBB80 50%, #FFFEBB80 75%, #F1F1F3 75%, #F1F1F3	);
   background-size: 30px 30px;
   background-attachment: fixed;
@@ -99,7 +107,7 @@ background: linear-gradient(transparent 40%, #FFFEBB 40%);
   background: linear-gradient(transparent 40%, #D0E2D1 40%);
   width: auto;
 }
-.career div{
+.career_contents{
   background-image: linear-gradient( -45deg, #D0E2D180 25%, #F1F1F3	 25%, #F1F1F3	 50%, #D0E2D180 50%, #D0E2D180 75%, #F1F1F3 75%, #F1F1F3	);
   background-size: 30px 30px;
   background-attachment: fixed;
@@ -113,7 +121,7 @@ background: linear-gradient(transparent 40%, #FFFEBB 40%);
   background: linear-gradient(transparent 40%, #F4BACE 40%);
   width: auto;
 }
-.create div{
+.create_contents{
   background-image: linear-gradient( -45deg, #F4BACE80 25%, #F1F1F3	 25%, #F1F1F3	 50%, #F4BACE80 50%, #F4BACE80 75%, #F1F1F3 75%, #F1F1F3	);
   background-size: 30px 30px;
   background-attachment: fixed;
@@ -127,7 +135,7 @@ background: linear-gradient(transparent 40%, #FFFEBB 40%);
   background: linear-gradient(transparent 40%, #FFC696 40%);
   width: auto;
 }
-.link div{
+.link_contents{
   background-image: linear-gradient( -45deg, #FFC69680 25%, #F1F1F3	 25%, #F1F1F3	 50%, #FFC69680 50%, #FFC69680 75%, #F1F1F3 75%, #F1F1F3	);
   background-size: 30px 30px;
   background-attachment: fixed;
@@ -135,4 +143,73 @@ background: linear-gradient(transparent 40%, #FFFEBB 40%);
   padding: 5px;
   margin-left: 25%;
   margin-top: 10px;
+}
+
+.pagination {
+  position:fixed;
+  right:20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: small;
+  z-index: 10;
+}
+.pagination a {
+  display:block;
+  height:20px;
+  margin-bottom:5px;
+  color:#000000;
+  position:relative;
+  padding:4px;
+}
+.pagination li{
+  list-style: none;
+}
+.pagination a.active:after {
+  box-shadow:inset 0 0 0 5px;
+}
+.pagination a .hover-text {
+  position:absolute;
+  right:15px;
+  top:7px;
+  opacity:0;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  padding-right: 15px;
+}
+.pagination a:hover .hover-text {
+  opacity: 1;
+}
+.pagination a:after {
+  -webkit-transition:box-shadow 0.5s ease;
+  transition:box-shadow 0.5s ease;
+  width:10px;
+  height:10px;
+  display: block;
+  border:1px solid;
+  border-radius:50%;
+  content:'';
+  position: absolute;
+  margin:auto;
+  top:0;
+  right:4px;
+  bottom:0;
+}
+
+.expression h2{
+  background: linear-gradient(transparent 40%, #FFFEBB 40%);
+  width: auto;
+}
+.expression .table{
+  padding: 5px;
+  border:solid 2px #FFFEBB;
+  border-radius: 1em;
+  background-color: #FFFFFF;
+}
+
+.expression .table .title{
+  font-size: large;
+  display: inline-block;
+  padding: 0px 5px 0px 5px;
+  background: linear-gradient(transparent 40%, #FFFEBB 40%);
+
 }
