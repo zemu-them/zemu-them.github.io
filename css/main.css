@@ -145,6 +145,10 @@ tr:nth-child(even) {
   margin-top: 10px;
 }
 
+.expression h2{
+  background: linear-gradient(transparent 40%, #FFFEBB 40%);
+  width: auto;
+}
 .expression .table{
   padding: 5px;
   border:solid 2px #FFFEBB;
