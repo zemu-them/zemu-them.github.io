@@ -44,35 +44,39 @@
   });
 
   if(window.innerWidth < window.innerHeight){
-    topPageLink();
+    topPageLinkHorizontal();
   }
 
   $(function(){
     //画面サイズ変更時に呼ばれる
     $(window).resize(function(){
       if($(window).width() < $(window).height()){
-        topPageLink();
+        topPageLinkHorizontal();
       } else {
-        $(".top_name div").css({
-          "height": "100%",
-          "width": "25%"
-        });
-        $(".top_career div").css({
-          "height": "100%",
-          "width": "25%"
-        });
-        $(".top_create div").css({
-          "height": "100%",
-          "width": "25%"
-        });
-        $(".top_link div").css({
-          "height": "100%",
-          "width": "25%"
-        });
+        topPageLinkVertical();
       }
     });
   });
-  function topPageLink() {
+
+  function topPageLinkVertical(){
+    $(".top_name div").css({
+      "height": "100%",
+      "width": "25%"
+    });
+    $(".top_career div").css({
+      "height": "100%",
+      "width": "25%"
+    });
+    $(".top_create div").css({
+      "height": "100%",
+      "width": "25%"
+    });
+    $(".top_link div").css({
+      "height": "100%",
+      "width": "25%"
+    });
+  }
+  function topPageLinkHorizontal() {
     $(".top_name div").css({
       "height": "25%",
       "width": "100%"
