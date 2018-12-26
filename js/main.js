@@ -45,43 +45,43 @@ $(function(){
 });
 
 function topPageLink(yoko,tate){
-  if(tate> yoko){
+  if(yoko < tate){
     //Vertical
-      $(".top_name div").css({
-        "height": "100%",
-        "width": "25%"
-      });
-      $(".top_career div").css({
-        "height": "100%",
-        "width": "25%"
-      });
-      $(".top_create div").css({
-        "height": "100%",
-        "width": "25%"
-      });
-      $(".top_link div").css({
-        "height": "100%",
-        "width": "25%"
-      });
+    $(".top_name div").css({
+      "height": "100%",
+      "width": "25%"
+    });
+    $(".top_career div").css({
+      "height": "100%",
+      "width": "25%"
+    });
+    $(".top_create div").css({
+      "height": "100%",
+      "width": "25%"
+    });
+    $(".top_link div").css({
+      "height": "100%",
+      "width": "25%"
+    });
   }
   else {
     //Horizontal
-      $(".top_name div").css({
-        "height": "25%",
-        "width": "100%"
-      });
-      $(".top_career div").css({
-        "height": "25%",
-        "width": "100%"
-      });
-      $(".top_create div").css({
-        "height": "25%",
-        "width": "100%"
-      });
-      $(".top_link div").css({
-        "height": "25%",
-        "width": "100%"
-      });
+    $(".top_name div").css({
+      "height": "25%",
+      "width": "100%"
+    });
+    $(".top_career div").css({
+      "height": "25%",
+      "width": "100%"
+    });
+    $(".top_create div").css({
+      "height": "25%",
+      "width": "100%"
+    });
+    $(".top_link div").css({
+      "height": "25%",
+      "width": "100%"
+    });
   }
 }
 function OnLinkClick(strLink) {
