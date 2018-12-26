@@ -44,8 +44,8 @@ $(function(){
   });
 });
 
-function topPageLink(yoko,tate){
-  if(yoko < tate){
+function topPageLink(horizontal,vertical){
+  if(horizontal < vertical){
     //Vertical
     $(".top_name div").css({
       "height": "100%",
