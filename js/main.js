@@ -1,4 +1,10 @@
 $(function() {
+
+  $(document).ready(function() {
+    // pagination非表示
+    hiddenPagination();
+  });
+
   $.scrollify({
     section:".panel",
     updateHash: true,
@@ -12,10 +18,7 @@ $(function() {
           "visibility" : "visible"
         });
       }else{
-        $(".pagination .active").removeClass("active");
-        $(".pagination").css({
-          "visibility" : "hidden"
-        });
+        hiddenPagination();
       }
     },
     after:function() {
@@ -34,6 +37,7 @@ $(function() {
     }
   });
 });
+
 //初期状態の画面表示
 topPageLink(window.innerWidth, window.innerHeight);
 
@@ -84,6 +88,15 @@ function topPageLink(horizontal,vertical){
     });
   }
 }
+
+// pagination非表示
+function hiddenPagination(){
+  $(".pagination .active").removeClass("active");
+  $(".pagination").css({
+    "visibility" : "hidden"
+  });
+}
+
 function OnLinkClick(strLink) {
   $.scrollify.move("#"+strLink);
   return false;
