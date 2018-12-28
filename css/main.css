@@ -1,3 +1,15 @@
+/* 全体の設定 */
+:root{
+  --yerrow-color: #FFFEB8;
+  --yerrow-stripe: linear-gradient(-45deg, var(--yerrow-color) 25%, #F1F1F3 25%, #F1F1F3 50%, var(--yerrow-color) 50%, var(--yerrow-color) 75%, #F1F1F3 75%, #F1F1F3);
+  --green-color: #D0E2D1;
+  --green-stripe:linear-gradient(-45deg, var(--green-color) 25%, #F1F1F3 25%, #F1F1F3 50%, var(--green-color) 50%, var(--green-color) 75%, #F1F1F3 75%, #F1F1F3);
+  --pink-color: #F4BACE;
+  --pink-stripe:linear-gradient(-45deg, var(--pink-color) 25%, #F1F1F3	25%, #F1F1F3 50%, var(--pink-color) 50%, var(--pink-color) 75%, #F1F1F3 75%, #F1F1F3);
+  --orange-color: #FFC696;
+  --orange-stripe: linear-gradient(-45deg, var(--orange-color) 25%, #F1F1F3 25%, #F1F1F3 50%, var(--orange-color) 50%, var(--orange-color) 75%, #F1F1F3 75%, #F1F1F3);
+}
+
 body{
   margin: 0px;
   padding: 0px;
@@ -8,12 +20,13 @@ h2{
   padding: 0px 5px 0px 5px;
 }
 
+/* 表の設定 */
 table {
   padding: 0px;
   border-collapse: collapse;
 }
 tr:nth-child(even) {
-  background: #FFFEBB;
+  background: var(--yerrow-color);
 }
 
 .panel{
@@ -40,11 +53,11 @@ tr:nth-child(even) {
   display: inline-flex;
   width: 25%;
   height: 100%;
-  background-color: #FFFEBB;
+  background-color: var(--yerrow-color);
   box-shadow: inset 0 0 15px rgba(0,0,0,.3);
 }
 .top_name :hover{
-  background-image: linear-gradient( -45deg, #FFFEBB 25%, #F1F1F3	 25%, #F1F1F3	 50%, #FFFEBB 50%, #FFFEBB 75%, #F1F1F3 75%, #F1F1F3	);
+  background-image: var(--yerrow-stripe);
   background-size: 50px 50px;
   background-attachment: fixed;
 }
@@ -54,11 +67,11 @@ tr:nth-child(even) {
   display: inline-flex;
   width: 25%;
   height: 100%;
-  background-color: #D0E2D1;
+  background-color: var(--green-color);
   box-shadow: inset 0 0 15px rgba(0,0,0,.3);
 }
 .top_career :hover{
-  background-image: linear-gradient( -45deg, #D0E2D1 25%, #F1F1F3	 25%, #F1F1F3	 50%, #D0E2D1 50%, #D0E2D1 75%, #F1F1F3 75%, #F1F1F3	);
+  background-image: var(--green-stripe);
   background-size: 50px 50px;
   background-attachment: fixed;
 }
@@ -68,11 +81,11 @@ tr:nth-child(even) {
   display: inline-flex;
   width: 25%;
   height: 100%;
-  background-color: #F4BACE;
+  background-color: var(--pink-color);
   box-shadow: inset 0 0 15px rgba(0,0,0,.3);
 }
 .top_create :hover{
-  background-image: linear-gradient( -45deg, #F4BACE 25%, #F1F1F3	 25%, #F1F1F3	 50%, #F4BACE 50%, #F4BACE 75%, #F1F1F3 75%, #F1F1F3	);
+  background-image: var(--pink-stripe);
   background-size: 50px 50px;
   background-attachment: fixed;
 }
@@ -82,67 +95,52 @@ tr:nth-child(even) {
   display: inline-flex;
   width: 25%;
   height: 100%;
-  background-color: #FFC696;
+  background-color: var(--orange-color);
   box-shadow: inset 0 0 15px rgba(0,0,0,.3);
 }
 .top_link :hover{
-  background-image: linear-gradient( -45deg, #FFC696 25%, #F1F1F3	 25%, #F1F1F3	 50%, #FFC696 50%, #FFC696 75%, #F1F1F3 75%, #F1F1F3	);
+  background-image: var(--orange-stripe);
   background-size: 50px 50px;
   background-attachment: fixed;
 }
-.name h2{
-  background: linear-gradient(transparent 40%, #FFFEBB 40%);
-}
-.name_contents{
-  background-image: linear-gradient( -45deg, #FFFEBB80 25%, #F1F1F3	 25%, #F1F1F3	 50%, #FFFEBB80 50%, #FFFEBB80 75%, #F1F1F3 75%, #F1F1F3	);
+
+.portfolio_contents{
   background-size: 30px 30px;
   background-attachment: fixed;
   width: 50%;
   padding: 5px;
   margin-left: 25%;
   margin-top: 10px;
+}
+.name h2{
+  background: linear-gradient(transparent 40%, var(--yerrow-color) 40%);
+}
+.name_contents{
+  background-image: linear-gradient(-45deg, #FFFEBB80 25%, #F1F1F3 25%, #F1F1F3 50%, #FFFEBB80 50%, #FFFEBB80 75%, #F1F1F3 75%, #F1F1F3	);
 }
 
 .career h2{
-  background: linear-gradient(transparent 40%, #D0E2D1 40%);
+  background: linear-gradient(transparent 40%, var(--green-color) 40%);
   width: auto;
 }
 .career_contents{
-  background-image: linear-gradient( -45deg, #D0E2D180 25%, #F1F1F3	 25%, #F1F1F3	 50%, #D0E2D180 50%, #D0E2D180 75%, #F1F1F3 75%, #F1F1F3	);
-  background-size: 30px 30px;
-  background-attachment: fixed;
-  width: 50%;
-  padding: 5px;
-  margin-left: 25%;
-  margin-top: 10px;
+  background-image: linear-gradient(-45deg, #D0E2D180 25%, #F1F1F3 25%, #F1F1F3 50%, #D0E2D180 50%, #D0E2D180 75%, #F1F1F3 75%, #F1F1F3	);
 }
 
 .create h2{
-  background: linear-gradient(transparent 40%, #F4BACE 40%);
+  background: linear-gradient(transparent 40%, var(--pink-color) 40%);
   width: auto;
 }
 .create_contents{
-  background-image: linear-gradient( -45deg, #F4BACE80 25%, #F1F1F3	 25%, #F1F1F3	 50%, #F4BACE80 50%, #F4BACE80 75%, #F1F1F3 75%, #F1F1F3	);
-  background-size: 30px 30px;
-  background-attachment: fixed;
-  width: 50%;
-  padding: 5px;
-  margin-left: 25%;
-  margin-top: 10px;
+  background-image: linear-gradient(-45deg, #F4BACE80 25%, #F1F1F3 25%, #F1F1F3 50%, #F4BACE80 50%, #F4BACE80 75%, #F1F1F3 75%, #F1F1F3	);
 }
 
 .link h2{
-  background: linear-gradient(transparent 40%, #FFC696 40%);
+  background: linear-gradient(transparent 40%, var(--orange-color) 40%);
   width: auto;
 }
 .link_contents{
-  background-image: linear-gradient( -45deg, #FFC69680 25%, #F1F1F3	 25%, #F1F1F3	 50%, #FFC69680 50%, #FFC69680 75%, #F1F1F3 75%, #F1F1F3	);
-  background-size: 30px 30px;
-  background-attachment: fixed;
-  width: 50%;
-  padding: 5px;
-  margin-left: 25%;
-  margin-top: 10px;
+  background-image: linear-gradient(-45deg, #FFC69680 25%, #F1F1F3 25%, #F1F1F3 50%, #FFC69680 50%, #FFC69680 75%, #F1F1F3 75%, #F1F1F3	);
 }
 
 .pagination {
@@ -195,13 +193,14 @@ tr:nth-child(even) {
   bottom:0;
 }
 
+/* エクスプレッション制御 */
 .expression h2{
-  background: linear-gradient(transparent 40%, #FFFEBB 40%);
+  background: linear-gradient(transparent 40%, var(--yerrow-color) 40%);
   width: auto;
 }
 .expression .table{
   padding: 5px;
-  border:solid 2px #FFFEBB;
+  border:solid 2px var(--yerrow-color);
   border-radius: 1em;
   background-color: #FFFFFF;
 }
@@ -210,6 +209,6 @@ tr:nth-child(even) {
   font-size: large;
   display: inline-block;
   padding: 0px 5px 0px 5px;
-  background: linear-gradient(transparent 40%, #FFFEBB 40%);
+  background: linear-gradient(transparent 40%, var(--yerrow-color) 40%);
 
 }
