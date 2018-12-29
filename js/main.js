@@ -18,10 +18,16 @@ $(function() {
           "visibility" : "visible"
         });
       }else{
-        hiddenPagination();
+        $(".pagination .active").removeClass("active");
       }
     },
-    after:function() {
+    after:function(i,panels) {
+      if(i == 0){
+        $(".pagination .active").removeClass("active");
+        $(".pagination").css({
+          "visibility" : "hidden"
+        });
+      }
       var pagination = "<ul class=\"pagination\">";
       var activeClass = "";
       $(".panel").each(function(i) {
