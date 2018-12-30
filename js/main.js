@@ -1,10 +1,5 @@
 $(function() {
 
-  $(document).ready(function() {
-    // pagination非表示
-    hiddenPagination();
-  });
-
   $.scrollify({
     section:".panel",
     updateHash: true,
@@ -40,7 +35,15 @@ $(function() {
       pagination += "</ul>";
       $(".home").append(pagination);
       $(".pagination a").on("click",$.scrollify.move);
-    }
+    },
+     afterRender:function() {
+       //スクロールバーの高さが一番上だった場合
+       if(document.documentElement.scrollTop == 0){
+         $(".pagination").css({
+           "visibility" : "hidden"
+         });
+       }
+     }
   });
 });
 
