@@ -24,9 +24,6 @@ $(function() {
             }
     },
     after:function(i,panels) {
-      if(i == 0){
-        $(".pagination .active").removeClass("active");
-      }
       var pagination = "<ul class=\"pagination\">";
       var activeClass = "";
       $(".panel").each(function(i) {
