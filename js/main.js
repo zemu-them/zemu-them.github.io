@@ -1,10 +1,5 @@
 $(function() {
 
-  $(document).ready(function() {
-    // pagination非表示
-    hiddenPagination();
-  });
-
   $.scrollify({
     section:".panel",
     updateHash: true,
@@ -17,11 +12,18 @@ $(function() {
         $(".pagination").css({
           "visibility" : "visible"
         });
+        $(".pagination a").css({
+          "opacity": "1",
+        });
       }else{
-        hiddenPagination();
-      }
+        $(".pagination .active").removeClass("active");
+        $(".pagination a").css({
+          "opacity": "0",
+          "transition":"opacity 0.5s ease 0.5s"
+        });
+            }
     },
-    after:function() {
+    after:function(i,panels) {
       var pagination = "<ul class=\"pagination\">";
       var activeClass = "";
       $(".panel").each(function(i) {
@@ -34,7 +36,15 @@ $(function() {
       pagination += "</ul>";
       $(".home").append(pagination);
       $(".pagination a").on("click",$.scrollify.move);
-    }
+    },
+     afterRender:function() {
+       //スクロールバーの高さが一番上だった場合
+       if(document.documentElement.scrollTop == 0){
+         $(".pagination").css({
+           "visibility" : "hidden"
+         });
+       }
+     }
   });
 });
 
@@ -87,14 +97,6 @@ function topPageLink(horizontal,vertical){
       "width": "100%"
     });
   }
-}
-
-// pagination非表示
-function hiddenPagination(){
-  $(".pagination .active").removeClass("active");
-  $(".pagination").css({
-    "visibility" : "hidden"
-  });
 }
 
 function OnLinkClick(strLink) {
