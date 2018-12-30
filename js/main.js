@@ -12,16 +12,20 @@ $(function() {
         $(".pagination").css({
           "visibility" : "visible"
         });
+        $(".pagination a").css({
+          "opacity": "1",
+        });
       }else{
         $(".pagination .active").removeClass("active");
-      }
+        $(".pagination a").css({
+          "opacity": "0",
+          "transition":"opacity 0.5s ease 0.5s"
+        });
+            }
     },
     after:function(i,panels) {
       if(i == 0){
         $(".pagination .active").removeClass("active");
-        $(".pagination").css({
-          "visibility" : "hidden"
-        });
       }
       var pagination = "<ul class=\"pagination\">";
       var activeClass = "";
@@ -96,14 +100,6 @@ function topPageLink(horizontal,vertical){
       "width": "100%"
     });
   }
-}
-
-// pagination非表示
-function hiddenPagination(){
-  $(".pagination .active").removeClass("active");
-  $(".pagination").css({
-    "visibility" : "hidden"
-  });
 }
 
 function OnLinkClick(strLink) {
