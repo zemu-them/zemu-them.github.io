@@ -199,16 +199,21 @@ tr:nth-child(even) {
   width: auto;
 }
 .expression .table{
+  margin: 10px;
   padding: 5px;
   border:solid 2px var(--yerrow-color);
   border-radius: 1em;
   background-color: #FFFFFF;
 }
-
 .expression .table .title{
   font-size: large;
   display: inline-block;
   padding: 0px 5px 0px 5px;
   background: linear-gradient(transparent 40%, var(--yerrow-color) 40%);
-
+}
+.expression .table tr{
+  border: solid 1px var(--yerrow-color);
+}
+.expression .table tr th{
+  font-weight: normal;
 }
