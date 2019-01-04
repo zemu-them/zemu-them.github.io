@@ -206,14 +206,16 @@ tr:nth-child(even) {
   background-color: #FFFFFF;
 }
 .expression .table .title{
+  margin: 5px;
   font-size: large;
   display: inline-block;
   padding: 0px 5px 0px 5px;
   background: linear-gradient(transparent 40%, var(--yerrow-color) 40%);
 }
-.expression .table tr{
-  border: solid 1px var(--yerrow-color);
+.expression .table tr td{
+  border: solid 2px #F1F1F3;
 }
 .expression .table tr th{
+  border: solid 2px #F1F1F3;
   font-weight: normal;
 }
