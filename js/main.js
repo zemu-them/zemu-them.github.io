@@ -13,13 +13,24 @@ $(function() {
           "visibility" : "visible"
         });
         $(".pagination a").css({
-          "opacity": "1",
+          "padding" : "4px",
+          "min-width" : "100px",
+          "height" : "20px",
+          "margin-bottom" : "5px"
         });
       }else{
         $(".pagination .active").removeClass("active");
         $(".pagination a").css({
-          "opacity": "0",
-          "transition":"opacity 0.5s ease 0.5s"
+          "opacity" : "0",
+          "padding" : "0px",
+          "min-width" : "0px",
+          "height" : "0px",
+          "margin-bottom" : "0px",
+          "transition" : "opacity 0.5s ease 0.5s, padding 0.5s ease 1s, min-width 0.5s ease 1s, height 0.5s ease 1s, margin-bottom 0.5s ease 1s"
+        });
+        $(".pagination").css({
+          "visibility" : "hidden",
+          "transition" : "visibility 0s ease 1s"
         });
             }
     },
@@ -35,6 +46,12 @@ $(function() {
       });
       pagination += "</ul>";
       $(".home").append(pagination);
+      if(i != 0){
+        $(".pagination a").css({
+          "opacity": "1",
+          "transition" : "opacity 0.5s"
+        });
+      }
       $(".pagination a").on("click",$.scrollify.move);
     },
      afterRender:function() {
