@@ -158,6 +158,7 @@ tr:nth-child(even) {
   color:#000000;
   position:relative;
   padding:4px;
+  min-width: 100px;
 }
 .pagination li{
   list-style: none;
