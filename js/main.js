@@ -16,7 +16,7 @@ $(function() {
           "padding" : "4px",
           "min-width" : "100px",
           "height" : "20px",
-          "margin-bottom" : "5px",
+          "margin-bottom" : "5px"
         });
       }else{
         $(".pagination .active").removeClass("active");
@@ -27,6 +27,10 @@ $(function() {
           "height" : "0px",
           "margin-bottom" : "0px",
           "transition" : "opacity 0.5s ease 0.5s, padding 0.5s ease 1s, min-width 0.5s ease 1s, height 0.5s ease 1s, margin-bottom 0.5s ease 1s"
+        });
+        $(".pagination").css({
+          "visibility" : "hidden",
+          "transition" : "visibility 0s ease 1s"
         });
             }
     },
