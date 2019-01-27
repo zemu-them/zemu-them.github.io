@@ -19,20 +19,47 @@
     <h2>エクスプレッション制御</h2>
     <div class="table">
       <div class="title">
-        タイトル
+        Global
       </div>
       <table>
         <tr>
-          <td>a</td><td>b</td>
+          <td>comp(name)</td><td>b</td>
         </tr>
         <tr>
-          <td>a</td><td>b</td>
+          <td>footage(name)</td><td>b</td>
         </tr>
         <tr>
-          <td>a</td><td>b</td>
+          <td>thisComp<</td><td>b</td>
         </tr>
         <tr>
-          <td>a</td><td>b</td>
+          <td>thisProject</td><td>b</td>
+        </tr>
+        <tr>
+          <td>time</td><td>b</td>
+        </tr>
+        <tr>
+          <td>colorDepth</td><td>b</td>
+        </tr>
+        <tr>
+          <td>posterizeTime(framesPerSecond)</td><td>b</td>
+        </tr>
+        <tr>
+          <td>timeToFrames(t = time + thisComp.displayStartTime, fps = 1.0 / thisComp.frameDuration, isDuration = false)</td><td>b</td>
+        </tr>
+        <tr>
+          <td>framesToTime(frames, fps = 1.0 / thisComp.frameDuration)</td><td>b</td>
+        </tr>
+        <tr>
+          <td>timeToTimecode(t = time + thisComp.displayStartTime, timecodeBase = 30, isDuration = false)</td><td>b</td>
+        </tr>
+        <tr>
+          <td>timeToNTSCTimecode(t = time + thisComp.displayStartTime, ntscDropFrame = false, isDuration = false)</td><td>b</td>
+        </tr>
+        <tr>
+          <td>timeToFeetAndFrames(t = time + thisComp.displayStartTime, fps = 1.0 / thisComp.frameDuration, framesPerFoot = 16, isDuration = false)</td><td>b</td>
+        </tr>
+        <tr>
+          <td>timeToCurrentFormat(t = time + thisComp.displayStartTime, fps = 1.0 / thisComp.frameDuration, isDuration = false, ntscDropFrame = thisComp.ntscDropFrame)</td><td>b</td>
         </tr>
       </table>
 
